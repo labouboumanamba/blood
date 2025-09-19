@@ -18,10 +18,9 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.text))
-      .catch((err) => console.error(err));
+    // Removed localhost API call for production deployment
+    // You can replace this with your actual backend API endpoint
+    setMessage("Bienvenue dans l'application de don de sang!");
   }, []);
 
   return (
